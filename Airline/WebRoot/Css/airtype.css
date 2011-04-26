@@ -1,0 +1,44 @@
+@CHARSET "UTF-8";
+
+/*编辑者：卢伟灵*/ /*增加图标*/
+.add {
+	background-image: url(../image/add.png) !important;
+	background-repeat: no-repeat;
+}
+
+/*删除图标*/
+.delete {
+	background-image: url(../image/delete.png) !important;
+	background-repeat: no-repeat;
+}
+
+/*修改图标*/
+.application_edit {
+	background-image: url(../image/application_edit.png) !important;
+	background-repeat: no-repeat;
+}
+
+/*重置图标*/
+.arrow_undo {
+	background-image: url(../image/arrow_undo.png) !important;
+	background-repeat: no-repeat;
+}
+
+/*清空图标*/
+.arrow_rotate_anticlockwise {
+	background-image: url(../image/arrow_rotate_anticlockwise.png)
+		!important;
+	background-repeat: no-repeat;
+}
+
+/*信息图标*/
+.information {
+	background-image: url(../image/information.png) !important;
+	background-repeat: no-repeat;
+}
+
+/*查询图标*/
+.search {
+	background-image: url(../image/search.png) !important;
+	background-repeat: no-repeat;
+}

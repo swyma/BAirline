@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<!-- 编辑者：全体成员 -->
+<struts>
+	<!-- Add packages here -->
+	<package name="Service" extends="struts-default">
+		<!-- 配置Action -->
+		<action name="Bookinformation" class="Service.BookinformationServiceImpl"></action>
+		<action name="Flightcompany" class="Service.FlightcompanyServiceImpl"></action>
+		<action name="Flightinformation" class="Service.FlightinformationServiceImpl"></action>
+	    <action name="Airtype" class="Service.AirtypeServiceImpl"></action>
+	    	<!-- 管理员信息 -->
+		<action name="Manager" class="Service.ManagerServiceImpl"></action>
+		<action name="membership" class="Service.membershipServiceImpl"></action>
+			<!-- 酒店信息 -->
+		<action name="Hotelinformation" class="Service.HotelinformationServiceImpl"></action>
+		<!-- 票价类型 -->
+		<action name="faretype" class="Service.FaretypeServiceImpl"></action>
+		<action name="Statistics" class="Service.StatisticsServiceImpl"></action>
+	</package>
+</struts>

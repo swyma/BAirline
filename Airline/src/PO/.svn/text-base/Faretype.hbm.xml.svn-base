@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- 
+	编辑者：周永丰
+-->
+<hibernate-mapping>
+	<class name="PO.Faretype" table="faretype" catalog="db_airline">
+		<id name="farId" type="short">
+			<column name="far_id" />
+			<generator class="assigned" />
+		</id>
+		<property name="farType" type="string">
+			<column name="far_type" length="20" not-null="true" />
+		</property>
+		<property name="farDiscount" type="double">
+			<column name="far_discount" precision="22" scale="0"
+				not-null="true" />
+		</property>
+		<property name="farIntegral" type="integer">
+			<column name="far_integral" not-null="true" />
+		</property>
+		<!-- <set name="customers" inverse="true">
+			<key>
+			<column name="far_id" not-null="true" />
+			</key>
+			<one-to-many class="PO.Customer" />
+			</set> -->
+		<!-- 修改为Map映射 -->
+		<map name="customers">
+			<key column="farId" foreign-key="farId" />
+			<map-key column="mapkey" type="string"></map-key>
+			<element column="mapvalue" type="string"></element>
+		</map>
+	</class>
+</hibernate-mapping>

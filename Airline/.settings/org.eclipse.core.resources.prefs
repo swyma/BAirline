@@ -1,0 +1,23 @@
+#Mon Apr 11 02:07:54 CST 2011
+eclipse.preferences.version=1
+encoding//WebRoot/Js=UTF-8
+encoding//WebRoot/Js/airtype.js=UTF-8
+encoding//WebRoot/Js/booking_ticketForm.js=UTF-8
+encoding//WebRoot/Js/flightcompany.js=UTF-8
+encoding//WebRoot/Js/flightinformation.js=UTF-8
+encoding//WebRoot/Js/flightinformation_show_cus.js=UTF-8
+encoding//WebRoot/Js/login.js=UTF-8
+encoding//WebRoot/Js/manager.js=UTF-8
+encoding//src/DAO/AirtypeDAOImpl.java=GBK
+encoding//src/DAO/BookinformationDAOImpl.java=GBK
+encoding//src/DAO/FlightcompanyDAOImpl.java=GBK
+encoding//src/DAO/IAirtypeDAO.java=GBK
+encoding//src/DAO/IBookinformationDAO.java=GBK
+encoding//src/DAO/IManagerDAO.java=GBK
+encoding//src/PO/Manager.java=GBK
+encoding//src/PO/Refundrecord.java=GBK
+encoding//src/Service/AirtypeServiceImpl.java=GBK
+encoding//src/Service/BookinformationServiceImpl.java=GBK
+encoding//src/Service/FlightcompanyServiceImpl.java=GBK
+encoding//src/Service/IBookinformationActionService.java=GBK
+encoding/<project>=UTF-8

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<!-- 编辑者：全体成员 -->
+<struts>
+	<!-- Add packages here -->
+	<package name="Service" extends="struts-default">
+		<!-- 配置Action -->
+		<action name="Flightcompany" class="Service.FlightcompanyServiceImpl"></action>
+	</package>
+</struts>

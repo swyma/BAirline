@@ -1,0 +1,22 @@
+#
+#Sun Nov 07 09:31:33 CST 2010
+genBasicCompId=false
+sessionFactoryName=HbmFactory.HibernateSessionFactory
+profile=
+daoSFId=
+version=3.2
+jndiPath=
+detectM2M=false
+reStrategyClass=
+springDaoFile=
+useJavaTypes=false
+keyGenerator=assigned
+libInstallFolder=/WebRoot/WEB-INF/lib
+addLibs2Project=true
+genVersionTag=false
+sessionFactoryId=
+basePersistenceClass=
+reSettingsFile=
+configFile=/Airline/src/hibernate.cfg.xml
+createConfigFile=true
+addLibs2Classpath=true

@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 31
+/svn/Airline/!svn/ver/2/src/DAO
+END
+IFlightcompanyDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/Airline/!svn/ver/2/src/DAO/IFlightcompanyDAO.java
+END
+FlightcompanyDAOImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/Airline/!svn/ver/2/src/DAO/FlightcompanyDAOImpl.java
+END

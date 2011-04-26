@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- 
+	编辑者：周永丰
+-->
+<hibernate-mapping>
+	<class name="PO.Customer" table="customer" catalog="db_airline">
+		<id name="cusAutoid" type="long">
+			<column name="cus_autoid" />
+			<generator class="assigned" />
+		</id>
+		<many-to-one name="faretype" class="PO.Faretype"
+			fetch="select">
+			<column name="far_id" not-null="true" />
+		</many-to-one>
+		<property name="cusAccount" type="string">
+			<column name="cus_account" length="20" not-null="true" />
+		</property>
+		<property name="cusPwd" type="string">
+			<column name="cus_pwd" length="20" not-null="true" />
+		</property>
+		<property name="cusId" type="long">
+			<column name="cus_id" precision="20" scale="0"
+				not-null="true" />
+		</property>
+		<property name="cusSex" type="string">
+			<column name="cus_sex" length="2" not-null="true" />
+		</property>
+		<property name="cusTelnumber" type="string">
+			<column name="cus_telnumber" length="20" not-null="true" />
+		</property>
+		<property name="cusEmail" type="string">
+			<column name="cus_email" length="50" not-null="true" />
+		</property>
+		<property name="cusTime" type="string">
+			<column name="cus_time" length="10" not-null="true" />
+		</property>
+		<property name="cusIntegral" type="integer">
+			<column name="cus_integral" not-null="true" />
+		</property>
+		<!-- 添加far_id字段属性，并插入更新为false -->
+		<property name="farId" type="short" insert="false" update="false">
+			<column name="far_id" not-null="true"  />
+		</property>
+		<property name="flag" type="byte">
+			<column name="flag" not-null="true" />
+		</property>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- 
+	编辑者：叶茂安
+-->
+<hibernate-mapping>
+	<class name="PO.Flightinformation" table="flightinformation"
+		catalog="db_airline">
+		<id name="fliAutoid" type="long">
+			<column name="fli_autoid" />
+			<generator class="identity" />
+		</id>
+		<!-- <many-to-one name="flightcompany" class="PO.Flightcompany"
+			fetch="select">
+			<column name="com_code" not-null="true" />
+		</many-to-one>-->
+		<!-- 添加属性 -->
+		<property name="comCode" type="string" >
+			<column name="com_code" length="20" not-null="true" />
+		</property>
+		<!-- <many-to-one name="airtype" class="PO.Airtype" fetch="select">
+			<column name="air_code" not-null="true" />
+		</many-to-one>-->
+		<!-- 添加属性 -->
+		<property name="airCode" type="string" >
+			<column name="air_code" length="20" not-null="true" />
+		</property>
+		<property name="fliEveryday" type="string">
+			<column name="fli_everyday" length="20" not-null="true" />
+		</property>
+		<property name="fliNo" type="string">
+			<column name="fli_no" length="20" not-null="true" />
+		</property>
+		<property name="fliDiscount" type="double">
+			<column name="fli_discount" precision="22" scale="0"
+				not-null="true" />
+		</property>
+		<property name="fliBaddress" type="string">
+			<column name="fli_baddress" length="20" not-null="true" />
+		</property>
+		<property name="fliAaddress" type="string">
+			<column name="fli_aaddress" length="20" not-null="true" />
+		</property>
+		<property name="fliBtime" type="calendar">
+			<column name="fli_btime" length="19" not-null="true" />
+		</property>
+		<property name="fliAtime" type="calendar">
+			<column name="fli_atime" length="19" not-null="true" />
+		</property>
+		<property name="fliFnumber" type="short">
+			<column name="fli_Fnumber" />
+		</property>
+		<property name="fliCnumber" type="short">
+			<column name="fli_Cnumber" />
+		</property>
+		<property name="fliYnumber" type="short">
+			<column name="fli_Ynumber" />
+		</property>
+		<property name="fliFfare" type="double">
+			<column name="fli_Ffare" precision="22" scale="0" />
+		</property>
+		<property name="fliCfare" type="double">
+			<column name="fli_Cfare" precision="22" scale="0" />
+		</property>
+		<property name="fliYfare" type="double">
+			<column name="fli_Yfare" precision="22" scale="0" />
+		</property>
+		<property name="fliRefundtime" type="string">
+			<column name="fli_refundtime" length="19" not-null="true" />
+		</property>
+		<property name="fliRefund" type="string">
+			<column name="fli_refund" not-null="true" />
+		</property>
+		<property name="flag" type="byte">
+			<column name="flag" not-null="true" />
+		</property>
+	</class>
+</hibernate-mapping>

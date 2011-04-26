@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- 
+	编辑者：周永丰
+-->
+<hibernate-mapping>
+	<class name="PO.Airtype" table="airtype" catalog="db_airline">
+		<id name="airAutoid" type="integer">
+			<column name="air_autoid" />
+			<generator class="assigned" />
+		</id>
+		<property name="airCode" type="string">
+			<column name="air_code" length="20" not-null="true"
+				unique="true" />
+		</property>
+		<property name="airF" type="string">
+			<column name="air_F" length="20" />
+		</property>
+		<property name="airFname" type="string">
+			<column name="air_Fname" length="20" />
+		</property>
+		<property name="airFnumber" type="short">
+			<column name="air_Fnumber" />
+		</property>
+		<property name="airC" type="string">
+			<column name="air_C" length="20" />
+		</property>
+		<property name="airCname" type="string">
+			<column name="air_Cname" length="20" />
+		</property>
+		<property name="airCnumber" type="short">
+			<column name="air_Cnumber" />
+		</property>
+		<property name="airY" type="string">
+			<column name="air_Y" length="20" />
+		</property>
+		<property name="airYname" type="string">
+			<column name="air_Yname" length="20" />
+		</property>
+		<property name="airYnumber" type="short">
+			<column name="air_Ynumber" />
+		</property>
+		<property name="airTotalnumber" type="short">
+			<column name="air_totalnumber" not-null="true" />
+		</property>
+		<property name="flag" type="byte">
+			<column name="flag" not-null="true" />
+		</property>
+		<!-- <set name="flightinformations" inverse="true">
+			<key>
+			<column name="air_code" not-null="true" />
+			</key>
+			<one-to-many class="PO.Flightinformation" />
+			</set> -->
+		<!-- 修改为Map映射 -->
+		<map name="flightinformations">
+			<key column="airCode" foreign-key="airCode" />
+			<map-key column="mapkey" type="string"></map-key>
+			<element column="mapvalue" type="string"></element>
+		</map>
+	</class>
+</hibernate-mapping>

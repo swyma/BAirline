@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- 
+	编辑者：周永丰
+-->
+<hibernate-mapping>
+	<class name="PO.Refundrecord" table="refundrecord"
+		catalog="db_airline">
+		<id name="refAutoid" type="long">
+			<column name="ref_autoid" />
+			<generator class="assigned" />
+		</id>
+		<many-to-one name="bookinformation" class="PO.Bookinformation"
+			fetch="select">
+			<column name="boo_autoid" unique="true" />
+		</many-to-one>
+		<!-- 添加字段属性 -->
+		<property name="booAutoid" type="long" insert="false" update="false">
+			<column name="boo_autoid" unique="true"/>
+		</property>
+		<property name="booNumber" type="short">
+			<column name="boo_number" />
+		</property>
+	</class>
+</hibernate-mapping>

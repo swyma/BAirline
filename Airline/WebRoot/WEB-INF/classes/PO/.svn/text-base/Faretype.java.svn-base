@@ -1,0 +1,85 @@
+//±‡º≠’ﬂ£∫÷‹”¿∑·
+package PO;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Faretype implements java.io.Serializable {
+
+	// Fields
+
+	private short farId;
+	private String farType;
+	private double farDiscount;
+	private Integer farIntegral;
+	//–ﬁ∏ƒŒ™map”≥…‰
+	private Map customers = new HashMap(0);
+
+	// Constructors
+
+	/** default constructor */
+	public Faretype() {
+	}
+
+	/** minimal constructor */
+	public Faretype(short farId, String farType, double farDiscount,
+			Integer farIntegral) {
+		this.farId = farId;
+		this.farType = farType;
+		this.farDiscount = farDiscount;
+		this.farIntegral = farIntegral;
+	}
+
+	/** full constructor */
+	public Faretype(short farId, String farType, double farDiscount,
+			Integer farIntegral, Map customers) {
+		this.farId = farId;
+		this.farType = farType;
+		this.farDiscount = farDiscount;
+		this.farIntegral = farIntegral;
+		this.customers = customers;
+	}
+
+	// Property accessors
+
+	public short getFarId() {
+		return this.farId;
+	}
+
+	public void setFarId(short farId) {
+		this.farId = farId;
+	}
+
+	public String getFarType() {
+		return this.farType;
+	}
+
+	public void setFarType(String farType) {
+		this.farType = farType;
+	}
+
+	public double getFarDiscount() {
+		return this.farDiscount;
+	}
+
+	public void setFarDiscount(double farDiscount) {
+		this.farDiscount = farDiscount;
+	}
+
+	public Integer getFarIntegral() {
+		return this.farIntegral;
+	}
+
+	public void setFarIntegral(Integer farIntegral) {
+		this.farIntegral = farIntegral;
+	}
+
+	public Map getCustomers() {
+		return this.customers;
+	}
+
+	public void setCustomers(Map customers) {
+		this.customers = customers;
+	}
+
+}

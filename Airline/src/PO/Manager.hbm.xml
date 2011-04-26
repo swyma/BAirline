@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- 
+    编辑者：周永丰
+-->
+<hibernate-mapping>
+    <class name="PO.Manager" table="manager" catalog="db_airline">
+        <id name="manAutoid" type="integer">
+            <column name="man_autoid" />
+            <generator class="identity" />
+        </id>
+        <property name="manAccount" type="string">
+            <column name="man_account" length="20" not-null="true" unique="true" />
+        </property>
+        <property name="manPwd" type="string">
+            <column name="man_pwd" length="20" not-null="true" />
+        </property>
+        <property name="manId" type="long">
+            <column name="man_id" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="manSex" type="string">
+            <column name="man_sex" length="2" not-null="true" />
+        </property>
+        <property name="manTelnumber" type="string">
+            <column name="man_telnumber" length="20" not-null="true" />
+        </property>
+        <property name="manEmail" type="string">
+            <column name="man_email" length="50" not-null="true" />
+        </property>
+        <property name="manRegister" type="string">
+            <column name="man_register" length="10" not-null="true" />
+        </property>
+        <property name="flag" type="byte">
+            <column name="flag" />
+        </property>
+    </class>
+</hibernate-mapping>

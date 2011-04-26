@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- 
+	编辑者：周永丰
+-->
+<hibernate-mapping>
+	<class name="PO.Flightcompany" table="flightcompany"
+		catalog="db_airline">
+		<id name="comAutoid" type="integer">
+			<column name="com_autoid" />
+			<generator class="identity" />
+		</id>
+		<property name="comCode" type="string">
+			<column name="com_code" length="20" not-null="true"
+				unique="true" />
+		</property>
+		<property name="comName" type="string">
+			<column name="com_name" length="50" not-null="true" />
+		</property>
+		<property name="comAddress" type="string">
+			<column name="com_address" length="50" not-null="true" />
+		</property>
+		<property name="comRegister" type="string">
+			<column name="com_register" length="10" not-null="true" />
+		</property>
+		<property name="comInformation" type="string">
+			<column name="com_information" length="10000"
+				not-null="true" />
+		</property>
+		<property name="flag" type="byte">
+			<column name="flag" not-null="true" />
+		</property>
+		<!-- <set name="flightinformations" inverse="true">
+			<key>
+			<column name="com_code" not-null="true" />
+			</key>
+			<one-to-many class="PO.Flightinformation" />
+			</set> -->
+		<!-- <set name="bookinformations" inverse="true">
+			<key>
+			<column name="com_code" not-null="true" />
+			</key>
+			<one-to-many class="PO.Bookinformation" />
+			</set> -->
+		<!-- 修改为Map映射 -->
+		<map name="flightinformations">
+			<key column="comCode" foreign-key="comCode" />
+			<map-key column="mapkey" type="string"></map-key>
+			<element column="mapvalue" type="string"></element>
+		</map>
+		<map name="bookinformations">
+			<key column="comCode" foreign-key="comCode" />
+			<map-key column="mapkey" type="string"></map-key>
+			<element column="mapvalue" type="string"></element>
+		</map>
+	</class>
+</hibernate-mapping>

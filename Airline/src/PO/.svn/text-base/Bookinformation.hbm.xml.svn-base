@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- 
+	编辑者：周永丰
+-->
+<hibernate-mapping>
+	<class name="PO.Bookinformation" table="bookinformation"
+		catalog="db_airline">
+		<id name="booAutoid" type="long">
+			<column name="boo_autoid" />
+			<generator class="assigned" />
+		</id>
+		<many-to-one name="flightcompany" class="PO.Flightcompany"
+			fetch="select">
+			<column name="com_code" not-null="true" />
+		</many-to-one>
+		<!-- 添加属性 -->
+		<property name="comCode" type="string" insert="false" update="false">
+			<column name="com_code" length="20" not-null="true" />
+		</property>
+		<property name="cusId" type="string">
+			<column name="cus_id" length="20" not-null="true" />
+		</property>
+		<property name="booEveryday" type="string">
+			<column name="boo_everyday" length="20" not-null="true" />
+		</property>
+		<property name="booNo" type="string">
+			<column name="boo_no" length="20" not-null="true" />
+		</property>
+		<property name="booBaddress" type="string">
+			<column name="boo_baddress" length="20" not-null="true" />
+		</property>
+		<property name="booAaddress" type="string">
+			<column name="boo_aaddress" length="20" not-null="true" />
+		</property>
+		<property name="booBtime" type="string">
+			<column name="boo_btime" length="19" not-null="true" />
+		</property>
+		<property name="booAtime" type="string">
+			<column name="boo_atime" not-null="true" />
+		</property>
+		<property name="booBerth" type="string">
+			<column name="boo_berth"  not-null="true" />
+		</property>
+		<property name="booNumber" type="short">
+			<column name="boo_number" not-null="true" />
+		</property>
+		<property name="booFare" type="double">
+			<column name="boo_fare" precision="22" scale="0"
+				not-null="true" />
+		</property>
+		<property name="booTime" type="string">
+			<column name="boo_time" length="19" not-null="true" />
+		</property>
+		<property name="flagPay" type="byte">
+			<column name="flag_pay" not-null="true" />
+		</property>
+		<property name="flagType" type="byte">
+			<column name="flag_type" not-null="true" />
+		</property>
+		<property name="flagPass" type="byte">
+			<column name="flag_pass" not-null="true" />
+		</property>
+		<!-- <set name="refundrecords" inverse="true">
+			<key>
+			<column name="boo_autoid" unique="true" />
+			</key>
+			<one-to-many class="PO.Refundrecord" />
+			</set> -->
+		<!-- 修改为Map映射 -->
+		<map name="refundrecords">
+			<key column="booAutoid" foreign-key="booAutoid" />
+			<map-key column="mapkey" type="string"></map-key>
+			<element column="mapvalue" type="string"></element>
+		</map>
+
+	</class>
+</hibernate-mapping>

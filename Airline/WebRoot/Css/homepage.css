@@ -1,0 +1,67 @@
+
+/*±‡º≠’ﬂ£∫—Ó∫£¡¡*/@CHARSET "UTF-8";
+/*--------------
+ html,body {
+	font: normal 12px verdana;
+	margin: 0;
+	padding: 0; 
+	border: 0 none;
+	overflow: hidden;
+	height: 100%;
+}
+
+.empty .x-panel-body {
+	padding-top: 0;
+	text-align: center;
+	font-style: italic;
+	color: gray;
+	font-size: 11px;
+}
+
+.x-btn button {
+	font-size: 14px;
+}
+
+.x-panel-header {
+	font-size: 14px;
+}
+------------------- */
+.empty .x-panel-body {
+	text-align: left;
+}
+
+.x-panel-header {
+	font-size: 15px;
+}
+
+.tree {
+	font-size: 12px;
+}
+
+.houseIcon {
+	background-image: url(../image/house.png) !important;
+}
+
+.page_save {
+	background-image: url(../image/page_save.png) !important;
+}
+
+.arrow_redo {
+	background-image: url(../image/arrow_redo.png) !important;
+}
+
+.user_edit {
+	background-image: url(../image/user_edit.png) !important;
+}
+
+.key {
+	background-image: url(../image/key.png) !important;
+}
+
+.door_out {
+	background-image: url(../image/door_out.png) !important;
+}
+
+.user {
+	background-image: url(../image/user.png) !important;
+}
